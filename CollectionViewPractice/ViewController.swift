@@ -68,7 +68,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
             //cell.imageView?.clipsToBounds = true
             cell.practiceImageView?.clipsToBounds = true
             //cell.parentView?.clipsToBounds = true
-            cell.imageView?.image = UIImage(named: photos[indexPath.row])
+            cell.practiceImageView?.image = UIImage(named: photos[indexPath.row])
             
             //セルの背景色をランダムに設定する。
             cell.backgroundColor = UIColor(red: CGFloat(drand48()), green: CGFloat(drand48()), blue: CGFloat(drand48()), alpha:1.0)
@@ -92,6 +92,22 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         else {
             return 0
         }
+    }
+    
+    //この関数内でセクションの設定を行う
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let label : UILabel = UILabel()
+        
+        label.backgroundColor = .white
+        if section == 0 {
+            label.font = UIFont.boldSystemFont(ofSize: CGFloat(30))
+            label.text = sectionTitle[section]
+        }
+        else if section == 1 {
+            label.font = UIFont.boldSystemFont(ofSize: CGFloat(25))
+            label.text = sectionTitle[section]
+        }
+        return label
     }
 
 }
