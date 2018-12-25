@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A4286F0421D20722005E515C /* CollectionBaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4286F0221D20722005E515C /* CollectionBaseTableViewCell.swift */; };
+		A4286F0521D20722005E515C /* CollectionBaseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4286F0321D20722005E515C /* CollectionBaseTableViewCell.xib */; };
 		A476AD4521C8A3E70099D3AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A476AD4421C8A3E70099D3AE /* AppDelegate.swift */; };
 		A476AD4721C8A3E70099D3AE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A476AD4621C8A3E70099D3AE /* ViewController.swift */; };
 		A476AD4A21C8A3E70099D3AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A476AD4821C8A3E70099D3AE /* Main.storyboard */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A4286F0221D20722005E515C /* CollectionBaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionBaseTableViewCell.swift; sourceTree = "<group>"; };
+		A4286F0321D20722005E515C /* CollectionBaseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionBaseTableViewCell.xib; sourceTree = "<group>"; };
 		A476AD4121C8A3E70099D3AE /* CollectionViewPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollectionViewPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A476AD4421C8A3E70099D3AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A476AD4621C8A3E70099D3AE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +68,8 @@
 			children = (
 				A476AD4421C8A3E70099D3AE /* AppDelegate.swift */,
 				A476AD4621C8A3E70099D3AE /* ViewController.swift */,
+				A4286F0221D20722005E515C /* CollectionBaseTableViewCell.swift */,
+				A4286F0321D20722005E515C /* CollectionBaseTableViewCell.xib */,
 				A476AD4821C8A3E70099D3AE /* Main.storyboard */,
 				A476AD5621C8BE5D0099D3AE /* PracticeCollectionViewCell.swift */,
 				A476AD5721C8BE5D0099D3AE /* PracticeCollectionViewCell.xib */,
@@ -134,6 +140,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4286F0521D20722005E515C /* CollectionBaseTableViewCell.xib in Resources */,
 				A476AD4F21C8A3E90099D3AE /* LaunchScreen.storyboard in Resources */,
 				A476AD5921C8BE5D0099D3AE /* PracticeCollectionViewCell.xib in Resources */,
 				A476AD4C21C8A3E90099D3AE /* Assets.xcassets in Resources */,
@@ -150,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A476AD5C21C8DA6B0099D3AE /* PracticeTableViewCell.swift in Sources */,
+				A4286F0421D20722005E515C /* CollectionBaseTableViewCell.swift in Sources */,
 				A476AD4721C8A3E70099D3AE /* ViewController.swift in Sources */,
 				A476AD4521C8A3E70099D3AE /* AppDelegate.swift in Sources */,
 				A476AD5821C8BE5D0099D3AE /* PracticeCollectionViewCell.swift in Sources */,
