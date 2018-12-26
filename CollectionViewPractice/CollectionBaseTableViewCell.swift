@@ -12,6 +12,8 @@ class CollectionBaseTableViewCell: UITableViewCell {
 
     @IBOutlet weak var baseCollectionView: UICollectionView!
     
+    @IBOutlet weak var collectionViewHeight: NSLayoutConstraint!
+    
     // サムネイル画像の名前
     let photos = ["1","2","3","4","5","6","7"]
 
@@ -26,6 +28,8 @@ class CollectionBaseTableViewCell: UITableViewCell {
         // CollectionCell一つ一つの大きさ.
         layout.itemSize = CGSize(width:183, height:183)
         baseCollectionView.collectionViewLayout = layout
+        let rowNumber = (photos.count + 1)/2
+        collectionViewHeight.constant = CGFloat(rowNumber*183)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

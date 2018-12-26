@@ -18,6 +18,9 @@
 		A476AD5921C8BE5D0099D3AE /* PracticeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A476AD5721C8BE5D0099D3AE /* PracticeCollectionViewCell.xib */; };
 		A476AD5C21C8DA6B0099D3AE /* PracticeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A476AD5A21C8DA6B0099D3AE /* PracticeTableViewCell.swift */; };
 		A476AD5D21C8DA6B0099D3AE /* PracticeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A476AD5B21C8DA6B0099D3AE /* PracticeTableViewCell.xib */; };
+		A4F19B7321D3299E00EE9E98 /* KeywordSearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F19B7121D3299E00EE9E98 /* KeywordSearchCollectionViewCell.swift */; };
+		A4F19B7421D3299E00EE9E98 /* KeywordSearchCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4F19B7221D3299E00EE9E98 /* KeywordSearchCollectionViewCell.xib */; };
+		A4F19B7621D329C300EE9E98 /* KeywordSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F19B7521D329C300EE9E98 /* KeywordSearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		A476AD5721C8BE5D0099D3AE /* PracticeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PracticeCollectionViewCell.xib; sourceTree = "<group>"; };
 		A476AD5A21C8DA6B0099D3AE /* PracticeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeTableViewCell.swift; sourceTree = "<group>"; };
 		A476AD5B21C8DA6B0099D3AE /* PracticeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PracticeTableViewCell.xib; sourceTree = "<group>"; };
+		A4F19B7121D3299E00EE9E98 /* KeywordSearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordSearchCollectionViewCell.swift; sourceTree = "<group>"; };
+		A4F19B7221D3299E00EE9E98 /* KeywordSearchCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeywordSearchCollectionViewCell.xib; sourceTree = "<group>"; };
+		A4F19B7521D329C300EE9E98 /* KeywordSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordSearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +84,9 @@
 				A476AD5021C8A3E90099D3AE /* Info.plist */,
 				A476AD5A21C8DA6B0099D3AE /* PracticeTableViewCell.swift */,
 				A476AD5B21C8DA6B0099D3AE /* PracticeTableViewCell.xib */,
+				A4F19B7121D3299E00EE9E98 /* KeywordSearchCollectionViewCell.swift */,
+				A4F19B7221D3299E00EE9E98 /* KeywordSearchCollectionViewCell.xib */,
+				A4F19B7521D329C300EE9E98 /* KeywordSearchViewController.swift */,
 			);
 			path = CollectionViewPractice;
 			sourceTree = "<group>";
@@ -143,6 +152,7 @@
 				A4286F0521D20722005E515C /* CollectionBaseTableViewCell.xib in Resources */,
 				A476AD4F21C8A3E90099D3AE /* LaunchScreen.storyboard in Resources */,
 				A476AD5921C8BE5D0099D3AE /* PracticeCollectionViewCell.xib in Resources */,
+				A4F19B7421D3299E00EE9E98 /* KeywordSearchCollectionViewCell.xib in Resources */,
 				A476AD4C21C8A3E90099D3AE /* Assets.xcassets in Resources */,
 				A476AD5D21C8DA6B0099D3AE /* PracticeTableViewCell.xib in Resources */,
 				A476AD4A21C8A3E70099D3AE /* Main.storyboard in Resources */,
@@ -156,10 +166,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4F19B7621D329C300EE9E98 /* KeywordSearchViewController.swift in Sources */,
 				A476AD5C21C8DA6B0099D3AE /* PracticeTableViewCell.swift in Sources */,
 				A4286F0421D20722005E515C /* CollectionBaseTableViewCell.swift in Sources */,
 				A476AD4721C8A3E70099D3AE /* ViewController.swift in Sources */,
 				A476AD4521C8A3E70099D3AE /* AppDelegate.swift in Sources */,
+				A4F19B7321D3299E00EE9E98 /* KeywordSearchCollectionViewCell.swift in Sources */,
 				A476AD5821C8BE5D0099D3AE /* PracticeCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

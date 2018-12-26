@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="KeywordSearchCollectionViewCell" customModule="CollectionViewPractice" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="348" height="280"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="348" height="280"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YZ0-Pb-mBl">
+                        <rect key="frame" x="0.0" y="0.0" width="348" height="196"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="YZ0-Pb-mBl" secondAttribute="height" multiplier="16:9" id="1vQ-Lm-Vul"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="住所" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cUS-O4-uYx">
+                        <rect key="frame" x="0.0" y="251" width="35" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="医院名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eZe-Co-74x">
+                        <rect key="frame" x="0.0" y="204" width="52" height="39"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="cUS-O4-uYx" secondAttribute="bottom" constant="8" id="1Ck-cI-CvX"/>
+                <constraint firstItem="eZe-Co-74x" firstAttribute="top" secondItem="YZ0-Pb-mBl" secondAttribute="bottom" constant="8" id="2BP-Xr-Bv7"/>
+                <constraint firstItem="YZ0-Pb-mBl" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="2Vs-ty-D73"/>
+                <constraint firstItem="YZ0-Pb-mBl" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="5Er-eY-tlY"/>
+                <constraint firstAttribute="trailing" secondItem="YZ0-Pb-mBl" secondAttribute="trailing" id="78U-cQ-9So"/>
+                <constraint firstItem="YZ0-Pb-mBl" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="LhA-IU-iU0"/>
+                <constraint firstItem="eZe-Co-74x" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="MSi-6S-lbh"/>
+                <constraint firstItem="YZ0-Pb-mBl" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="bQp-2z-o1R"/>
+                <constraint firstItem="cUS-O4-uYx" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="dJw-PD-ff2"/>
+                <constraint firstItem="cUS-O4-uYx" firstAttribute="top" secondItem="eZe-Co-74x" secondAttribute="bottom" constant="8" id="hVY-Hc-5zd"/>
+                <constraint firstAttribute="trailing" secondItem="YZ0-Pb-mBl" secondAttribute="trailing" id="zPW-1M-K2l"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="348" height="280"/>
+            <connections>
+                <outlet property="institutionAddress" destination="cUS-O4-uYx" id="BBd-A7-h98"/>
+                <outlet property="institutionImageView" destination="YZ0-Pb-mBl" id="5nZ-mL-xyT"/>
+                <outlet property="institutionName" destination="eZe-Co-74x" id="ntS-sK-Qd9"/>
+            </connections>
+            <point key="canvasLocation" x="376" y="241.97901049475263"/>
+        </collectionViewCell>
+    </objects>
+</document>
