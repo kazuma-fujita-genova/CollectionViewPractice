@@ -14,15 +14,16 @@ class KeywordSearchPracticeCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var institutionAddress: UILabel!
     
-    @IBOutlet weak var imageScrollView: UIScrollView!
+    @IBOutlet weak var imageCollectionView: UICollectionView!
+    //@IBOutlet weak var imageScrollView: UIScrollView!
     
-    @IBOutlet weak var imageScrollParentView: UIView!
+    //@IBOutlet weak var imageScrollParentView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         // ScrollView左右ページング有効
-        imageScrollView.isPagingEnabled = true
+        //imageScrollView.isPagingEnabled = true
     }
 
 }

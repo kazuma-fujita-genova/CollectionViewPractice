@@ -19,51 +19,46 @@
                 <rect key="frame" x="0.0" y="0.0" width="333" height="254"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LEK-3f-fSh">
-                        <rect key="frame" x="0.0" y="0.0" width="333" height="187.5"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WCW-VH-mtn">
-                                <rect key="frame" x="0.0" y="0.0" width="333" height="187.5"/>
-                            </scrollView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="WCW-VH-mtn" firstAttribute="top" secondItem="LEK-3f-fSh" secondAttribute="top" id="IXN-Rb-6JL"/>
-                            <constraint firstItem="WCW-VH-mtn" firstAttribute="leading" secondItem="LEK-3f-fSh" secondAttribute="leading" id="W1Z-yI-pu1"/>
-                            <constraint firstAttribute="width" secondItem="LEK-3f-fSh" secondAttribute="height" multiplier="16:9" id="YSJ-Gj-xRb"/>
-                            <constraint firstAttribute="bottom" secondItem="WCW-VH-mtn" secondAttribute="bottom" id="i9E-3f-0sc"/>
-                            <constraint firstAttribute="trailing" secondItem="WCW-VH-mtn" secondAttribute="trailing" id="nli-al-fx7"/>
-                        </constraints>
-                    </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="医院名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="75l-lX-xJu">
-                        <rect key="frame" x="0.0" y="195.5" width="52" height="21"/>
+                        <rect key="frame" x="0.0" y="196.5" width="52" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="住所" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vyh-0T-u99">
-                        <rect key="frame" x="0.0" y="224.5" width="35" height="21.5"/>
+                        <rect key="frame" x="0.0" y="225.5" width="35" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="wNZ-M2-aUL">
+                        <rect key="frame" x="0.0" y="0.0" width="333" height="189"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="wNZ-M2-aUL" secondAttribute="height" multiplier="37:21" id="pRe-iS-rbr"/>
+                        </constraints>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="lxH-Ic-rNL">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="LEK-3f-fSh" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="1Mt-G9-UXh"/>
                 <constraint firstItem="vyh-0T-u99" firstAttribute="top" secondItem="75l-lX-xJu" secondAttribute="bottom" constant="8" id="3V9-Fw-k5E"/>
-                <constraint firstItem="LEK-3f-fSh" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="HeF-KQ-qMk"/>
-                <constraint firstAttribute="trailing" secondItem="LEK-3f-fSh" secondAttribute="trailing" id="O66-8Y-YLg"/>
                 <constraint firstItem="75l-lX-xJu" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="U54-Qg-fdk"/>
                 <constraint firstAttribute="bottom" secondItem="vyh-0T-u99" secondAttribute="bottom" constant="8" id="Xll-jh-epY"/>
-                <constraint firstItem="75l-lX-xJu" firstAttribute="top" secondItem="LEK-3f-fSh" secondAttribute="bottom" constant="8" id="hoc-00-C7a"/>
+                <constraint firstItem="wNZ-M2-aUL" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="aGe-7A-aRa"/>
+                <constraint firstAttribute="trailing" secondItem="wNZ-M2-aUL" secondAttribute="trailing" id="k7K-kJ-Ya0"/>
                 <constraint firstItem="vyh-0T-u99" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="kAE-bu-Pc4"/>
+                <constraint firstItem="wNZ-M2-aUL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="zN9-xW-R7H"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="333" height="254"/>
             <connections>
-                <outlet property="imageScrollParentView" destination="LEK-3f-fSh" id="vjn-mG-sRe"/>
-                <outlet property="imageScrollView" destination="WCW-VH-mtn" id="2H2-4O-SXL"/>
+                <outlet property="imageCollectionView" destination="wNZ-M2-aUL" id="D7M-bN-Kbo"/>
                 <outlet property="institutionAddress" destination="vyh-0T-u99" id="v7N-cJ-TC2"/>
                 <outlet property="institutionName" destination="75l-lX-xJu" id="b6s-5E-YXW"/>
             </connections>
