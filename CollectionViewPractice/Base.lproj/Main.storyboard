@@ -85,6 +85,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="8Ev-7t-Idh" customClass="TabBarViewController" customModule="CollectionViewPractice" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fLN-Ua-Hdh">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -92,6 +93,43 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="izw-Cd-4bx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1036.231884057971" y="-51.5625"/>
+        </scene>
+        <!--Keyword Search List View Controller-->
+        <scene sceneID="rvR-PZ-1zD">
+            <objects>
+                <viewController storyboardIdentifier="KeywordSearchList" id="hcr-in-wPK" customClass="KeywordSearchListViewController" customModule="CollectionViewPractice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zch-hk-1cC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2JN-DM-pMx">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="H1X-1e-eec">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="84z-UE-Zy1" firstAttribute="bottom" secondItem="2JN-DM-pMx" secondAttribute="bottom" id="1YC-y8-ahq"/>
+                            <constraint firstItem="2JN-DM-pMx" firstAttribute="top" secondItem="84z-UE-Zy1" secondAttribute="top" id="D0e-Ah-Cjd"/>
+                            <constraint firstItem="84z-UE-Zy1" firstAttribute="trailing" secondItem="2JN-DM-pMx" secondAttribute="trailing" id="d6j-sr-s8d"/>
+                            <constraint firstItem="2JN-DM-pMx" firstAttribute="leading" secondItem="84z-UE-Zy1" secondAttribute="leading" id="kIl-OJ-vlY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="84z-UE-Zy1"/>
+                    </view>
+                    <connections>
+                        <outlet property="keywordSearchCollectionView" destination="2JN-DM-pMx" id="1Em-5D-AoZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6dm-sK-pWC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-219" y="-117"/>
         </scene>
     </scenes>
 </document>

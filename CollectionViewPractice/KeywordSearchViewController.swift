@@ -8,6 +8,7 @@
 
 import UIKit
 
+// 画像横スクロールをCollectionViewで表現したVersion。
 class KeywordSearchViewController: UIViewController {
     
     @IBOutlet weak var keywordSearchCollectionView: UICollectionView!

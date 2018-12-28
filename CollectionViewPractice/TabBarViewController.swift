@@ -17,7 +17,12 @@ class TabBarViewController: UITabBarController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let keywordSearchViewController = storyboard.instantiateViewController(withIdentifier:"KeywordSearch")
         let rootViewController = UINavigationController(rootViewController: keywordSearchViewController)
-        setViewControllers([rootViewController], animated: false)
+
+        let keywordSearchListViewController = storyboard.instantiateViewController(withIdentifier:"KeywordSearchList")
+        let keywordSearchListViewRootController = UINavigationController(rootViewController: keywordSearchListViewController)
+
+
+        setViewControllers([keywordSearchListViewRootController,rootViewController], animated: false)
     }
     
 

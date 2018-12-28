@@ -12,6 +12,9 @@
 		A4286F0521D20722005E515C /* CollectionBaseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4286F0321D20722005E515C /* CollectionBaseTableViewCell.xib */; };
 		A47141BE21D4D920004AB662 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47141BC21D4D920004AB662 /* ImageCollectionViewCell.swift */; };
 		A47141BF21D4D920004AB662 /* ImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A47141BD21D4D920004AB662 /* ImageCollectionViewCell.xib */; };
+		A47141C121D4DAAD004AB662 /* KeywordSearchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47141C021D4DAAD004AB662 /* KeywordSearchListViewController.swift */; };
+		A47141C421D4DBFD004AB662 /* KeywordSearchInstitutionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47141C221D4DBFD004AB662 /* KeywordSearchInstitutionCollectionViewCell.swift */; };
+		A47141C521D4DBFD004AB662 /* KeywordSearchInstitutionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A47141C321D4DBFD004AB662 /* KeywordSearchInstitutionCollectionViewCell.xib */; };
 		A476AD4521C8A3E70099D3AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A476AD4421C8A3E70099D3AE /* AppDelegate.swift */; };
 		A476AD4721C8A3E70099D3AE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A476AD4621C8A3E70099D3AE /* ViewController.swift */; };
 		A476AD4A21C8A3E70099D3AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A476AD4821C8A3E70099D3AE /* Main.storyboard */; };
@@ -37,6 +40,9 @@
 		A4286F0321D20722005E515C /* CollectionBaseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionBaseTableViewCell.xib; sourceTree = "<group>"; };
 		A47141BC21D4D920004AB662 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		A47141BD21D4D920004AB662 /* ImageCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		A47141C021D4DAAD004AB662 /* KeywordSearchListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordSearchListViewController.swift; sourceTree = "<group>"; };
+		A47141C221D4DBFD004AB662 /* KeywordSearchInstitutionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordSearchInstitutionCollectionViewCell.swift; sourceTree = "<group>"; };
+		A47141C321D4DBFD004AB662 /* KeywordSearchInstitutionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeywordSearchInstitutionCollectionViewCell.xib; sourceTree = "<group>"; };
 		A476AD4121C8A3E70099D3AE /* CollectionViewPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollectionViewPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A476AD4421C8A3E70099D3AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A476AD4621C8A3E70099D3AE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -89,10 +95,10 @@
 		A476AD4321C8A3E70099D3AE /* CollectionViewPractice */ = {
 			isa = PBXGroup;
 			children = (
-				A47141BC21D4D920004AB662 /* ImageCollectionViewCell.swift */,
-				A47141BD21D4D920004AB662 /* ImageCollectionViewCell.xib */,
 				A476AD4421C8A3E70099D3AE /* AppDelegate.swift */,
 				A4F19B7721D3660500EE9E98 /* TabBarViewController.swift */,
+				A47141BC21D4D920004AB662 /* ImageCollectionViewCell.swift */,
+				A47141BD21D4D920004AB662 /* ImageCollectionViewCell.xib */,
 				A476AD4621C8A3E70099D3AE /* ViewController.swift */,
 				A4286F0221D20722005E515C /* CollectionBaseTableViewCell.swift */,
 				A4286F0321D20722005E515C /* CollectionBaseTableViewCell.xib */,
@@ -109,6 +115,9 @@
 				A4F19B7921D48D4500EE9E98 /* KeywordSearchPracticeCollectionViewCell.swift */,
 				A4F19B7A21D48D4600EE9E98 /* KeywordSearchPracticeCollectionViewCell.xib */,
 				A4F19B7521D329C300EE9E98 /* KeywordSearchViewController.swift */,
+				A47141C221D4DBFD004AB662 /* KeywordSearchInstitutionCollectionViewCell.swift */,
+				A47141C321D4DBFD004AB662 /* KeywordSearchInstitutionCollectionViewCell.xib */,
+				A47141C021D4DAAD004AB662 /* KeywordSearchListViewController.swift */,
 			);
 			path = CollectionViewPractice;
 			sourceTree = "<group>";
@@ -193,6 +202,7 @@
 				A4286F0521D20722005E515C /* CollectionBaseTableViewCell.xib in Resources */,
 				A4F19B7C21D48D4600EE9E98 /* KeywordSearchPracticeCollectionViewCell.xib in Resources */,
 				A476AD4F21C8A3E90099D3AE /* LaunchScreen.storyboard in Resources */,
+				A47141C521D4DBFD004AB662 /* KeywordSearchInstitutionCollectionViewCell.xib in Resources */,
 				A476AD5921C8BE5D0099D3AE /* PracticeCollectionViewCell.xib in Resources */,
 				A4F19B7421D3299E00EE9E98 /* KeywordSearchCollectionViewCell.xib in Resources */,
 				A476AD4C21C8A3E90099D3AE /* Assets.xcassets in Resources */,
@@ -216,6 +226,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-CollectionViewPractice/Pods-CollectionViewPractice-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/CHIPageControl/CHIPageControl.framework",
 				"${BUILT_PRODUCTS_DIR}/FSPagerView/FSPagerView.framework",
+				"${BUILT_PRODUCTS_DIR}/FaveButton/FaveButton.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -223,6 +234,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CHIPageControl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSPagerView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FaveButton.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -265,9 +277,11 @@
 				A4286F0421D20722005E515C /* CollectionBaseTableViewCell.swift in Sources */,
 				A476AD4721C8A3E70099D3AE /* ViewController.swift in Sources */,
 				A47141BE21D4D920004AB662 /* ImageCollectionViewCell.swift in Sources */,
+				A47141C121D4DAAD004AB662 /* KeywordSearchListViewController.swift in Sources */,
 				A476AD4521C8A3E70099D3AE /* AppDelegate.swift in Sources */,
 				A4F19B7321D3299E00EE9E98 /* KeywordSearchCollectionViewCell.swift in Sources */,
 				A476AD5821C8BE5D0099D3AE /* PracticeCollectionViewCell.swift in Sources */,
+				A47141C421D4DBFD004AB662 /* KeywordSearchInstitutionCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

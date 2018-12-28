@@ -1,0 +1,40 @@
+PODS:
+  - CHIPageControl (0.1.7):
+    - CHIPageControl/Aji (= 0.1.7)
+    - CHIPageControl/Aleppo (= 0.1.7)
+    - CHIPageControl/Chimayo (= 0.1.7)
+    - CHIPageControl/Fresno (= 0.1.7)
+    - CHIPageControl/Jalapeno (= 0.1.7)
+    - CHIPageControl/Jaloro (= 0.1.7)
+    - CHIPageControl/Paprika (= 0.1.7)
+    - CHIPageControl/Puya (= 0.1.7)
+  - CHIPageControl/Aji (0.1.7)
+  - CHIPageControl/Aleppo (0.1.7)
+  - CHIPageControl/Chimayo (0.1.7)
+  - CHIPageControl/Fresno (0.1.7)
+  - CHIPageControl/Jalapeno (0.1.7)
+  - CHIPageControl/Jaloro (0.1.7)
+  - CHIPageControl/Paprika (0.1.7)
+  - CHIPageControl/Puya (0.1.7)
+  - FaveButton (3.0.0)
+  - FSPagerView (0.8.1)
+
+DEPENDENCIES:
+  - CHIPageControl
+  - FaveButton
+  - FSPagerView
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - CHIPageControl
+    - FaveButton
+    - FSPagerView
+
+SPEC CHECKSUMS:
+  CHIPageControl: bbe1ddd0c688c02ec65b7f7e7d34551a3d16f37c
+  FaveButton: 1fa9cd7b037d7164e229765401931271adbe3a23
+  FSPagerView: 4e865526acc0b0e3077e2abb29b8d10a9f395476
+
+PODFILE CHECKSUM: 5566787481193108ea5e2bed824aef7703ab2c78
+
+COCOAPODS: 1.5.3

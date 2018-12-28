@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="KeywordSearchInstitutionCollectionViewCell" customModule="CollectionViewPractice" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="255" height="212"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="255" height="212"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vxf-NG-2aJ" customClass="FSPagerView" customModule="FSPagerView">
+                        <rect key="frame" x="0.0" y="0.0" width="255" height="143.5"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Beu-jT-01o" customClass="CHIPageControlAleppo" customModule="CHIPageControl">
+                                <rect key="frame" x="0.0" y="113.5" width="255" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="aLV-7d-HKl"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bW8-gQ-33Y" customClass="FaveButton" customModule="FaveButton">
+                                <rect key="frame" x="203" y="8" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="3tj-QZ-R4P"/>
+                                    <constraint firstAttribute="width" constant="44" id="hXK-Lb-u02"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="heart"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="bW8-gQ-33Y" secondAttribute="trailing" constant="8" id="Bmi-ax-RS6"/>
+                            <constraint firstItem="Beu-jT-01o" firstAttribute="leading" secondItem="Vxf-NG-2aJ" secondAttribute="leading" id="CkV-Gc-we5"/>
+                            <constraint firstItem="bW8-gQ-33Y" firstAttribute="top" secondItem="Vxf-NG-2aJ" secondAttribute="top" constant="8" id="LVs-Y8-v0y"/>
+                            <constraint firstAttribute="trailing" secondItem="Beu-jT-01o" secondAttribute="trailing" id="Ppl-vs-paN"/>
+                            <constraint firstAttribute="bottom" secondItem="Beu-jT-01o" secondAttribute="bottom" id="h33-O0-sxq"/>
+                            <constraint firstAttribute="width" secondItem="Vxf-NG-2aJ" secondAttribute="height" multiplier="16:9" id="nwy-kj-Psp"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="医院" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Woa-aZ-OBG">
+                        <rect key="frame" x="0.0" y="151.5" width="35" height="23.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="住所" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vds-EA-hC9">
+                        <rect key="frame" x="0.0" y="183" width="35" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="Vxf-NG-2aJ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="0nT-KX-fTQ"/>
+                <constraint firstAttribute="bottom" secondItem="Vds-EA-hC9" secondAttribute="bottom" constant="8" id="3oL-rd-mPb"/>
+                <constraint firstItem="Vxf-NG-2aJ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="5Cd-mv-RZd"/>
+                <constraint firstItem="Woa-aZ-OBG" firstAttribute="top" secondItem="Vxf-NG-2aJ" secondAttribute="bottom" constant="8" id="8cz-5i-XxA"/>
+                <constraint firstItem="Woa-aZ-OBG" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="AfB-5o-kaA"/>
+                <constraint firstAttribute="trailing" secondItem="Vxf-NG-2aJ" secondAttribute="trailing" id="fz4-jY-Tmg"/>
+                <constraint firstItem="Vds-EA-hC9" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="hoy-LQ-Rwe"/>
+                <constraint firstItem="Vds-EA-hC9" firstAttribute="top" secondItem="Woa-aZ-OBG" secondAttribute="bottom" constant="8" id="wzx-IY-RsL"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="255" height="212"/>
+            <connections>
+                <outlet property="favoriteButton" destination="bW8-gQ-33Y" id="haV-Br-1Iv"/>
+                <outlet property="institutionAddress" destination="Vds-EA-hC9" id="Yxv-Lf-JfC"/>
+                <outlet property="institutionName" destination="Woa-aZ-OBG" id="hob-zw-hym"/>
+                <outlet property="pageControl" destination="Beu-jT-01o" id="VfQ-1d-WDP"/>
+                <outlet property="pagerView" destination="Vxf-NG-2aJ" id="eI6-g4-hB3"/>
+            </connections>
+            <point key="canvasLocation" x="301.60000000000002" y="226.6866566716642"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="heart" width="128" height="128"/>
+    </resources>
+</document>
