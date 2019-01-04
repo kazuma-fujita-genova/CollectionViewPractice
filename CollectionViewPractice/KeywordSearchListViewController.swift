@@ -26,7 +26,7 @@ class KeywordSearchListViewController: UIViewController {
     let toastMessage = MDCSnackbarMessage()
     
     // サムネイル画像の名前
-    let photos = ["1","2","3","4","5","6","7"]
+    let photos = ["3","4","5","6","7"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -117,11 +117,14 @@ extension KeywordSearchListViewController: UICollectionViewDataSource, UICollect
         
 
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionCell", for: indexPath) as! KeywordSearchInstitutionCollectionViewCell
-        cell.institutionName.text = photos[indexPath.row]
         
-        cell.pagerView.dataSource = self
-        cell.pagerView.delegate = self
+        cell.institutionName.text = photos[indexPath.row]
         cell.favoriteButton.delegate = self
+        
+        if indexPath.row < 2 {
+            // TODO: とりあえず2Cell分複数画像登録
+            cell.photos = self.photos
+        }
         
         //セルの背景色をランダムに設定する。
         cell.backgroundColor = UIColor(red: CGFloat(drand48()), green: CGFloat(drand48()), blue: CGFloat(drand48()), alpha: 1.0)
@@ -162,40 +165,6 @@ extension KeywordSearchListViewController: UICollectionViewDelegateFlowLayout {
     // Cell内側左右間の最小マージン
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 16
-    }
-}
-
-// MARK: - FSPagerViewDataSource, FSPagerViewDelegate
-extension KeywordSearchListViewController: FSPagerViewDataSource, FSPagerViewDelegate {
-    
-    func numberOfItems(in pagerView: FSPagerView) -> Int {
-        return photos.count
-    }
-    
-    func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
-        let cell = pagerView.dequeueReusableCell(withReuseIdentifier: "PagerViewCell", at: index)
-        
-        cell.contentView.layer.shadowOpacity = 0.4
-        cell.contentView.layer.opacity = 0.86
-        cell.imageView?.image = UIImage(named: photos[index])
-        cell.imageView?.contentMode = .scaleAspectFill
-        cell.imageView?.clipsToBounds = true
-        return cell
-    }
-    
-    func pagerView(_ pagerView: FSPagerView, didSelectItemAt index: Int) {
-        pagerView.deselectItem(at: index, animated: true)
-        pagerView.scrollToItem(at: index, animated: true)
-    }
-    
-    func pagerViewWillEndDragging(_ pagerView: FSPagerView, targetIndex: Int) {
-        // TODO: KeywordSearchCellのpageControlが取得できない
-        // pageControl.set(progress: targetIndex, animated: true)
-    }
-    
-    func pagerViewDidEndScrollAnimation(_ pagerView: FSPagerView) {
-        // TODO: KeywordSearchCellのpageControlが取得できない
-        // pageControl.set(progress: pagerView.currentIndex, animated: true)
     }
 }
 

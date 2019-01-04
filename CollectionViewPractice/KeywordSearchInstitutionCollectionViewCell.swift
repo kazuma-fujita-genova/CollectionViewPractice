@@ -13,6 +13,8 @@ import FaveButton
 
 class KeywordSearchInstitutionCollectionViewCell: UICollectionViewCell {
     
+    var photos = ["1"]
+    
     @IBOutlet weak var institutionName: UILabel!
     
     @IBOutlet weak var institutionAddress: UILabel!
@@ -58,14 +60,53 @@ class KeywordSearchInstitutionCollectionViewCell: UICollectionViewCell {
             // アクティブなドット色
             self.pageControl.currentPageTintColor = .white
             // 非アクティブなドットの透明度
-            self.pageControl.inactiveTransparency = 0.7
+            self.pageControl.inactiveTransparency = 0.8
         }
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        pagerView.dataSource = self
+        pagerView.delegate = self
+
         pagerView.addSubview(pageControl)
         pagerView.addSubview(favoriteButton)
+    }
+}
+
+
+// MARK: - FSPagerViewDataSource, FSPagerViewDelegate
+extension KeywordSearchInstitutionCollectionViewCell: FSPagerViewDataSource, FSPagerViewDelegate {
+    
+    func numberOfItems(in pagerView: FSPagerView) -> Int {
+        // pageControl設定
+        pageControl.numberOfPages = photos.count
+
+        return photos.count
+    }
+    
+    func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
+        let cell = pagerView.dequeueReusableCell(withReuseIdentifier: "PagerViewCell", at: index)
+        
+        // cell.contentView.layer.shadowOpacity = 0.4
+        // cell.contentView.layer.opacity = 0.86
+        cell.imageView?.image = UIImage(named: self.photos[index])
+        cell.imageView?.contentMode = .scaleAspectFill
+        cell.imageView?.clipsToBounds = true
+        return cell
+    }
+    
+    func pagerView(_ pagerView: FSPagerView, didSelectItemAt index: Int) {
+        pagerView.deselectItem(at: index, animated: true)
+        pagerView.scrollToItem(at: index, animated: true)
+    }
+    
+    func pagerViewWillEndDragging(_ pagerView: FSPagerView, targetIndex: Int) {
+        pageControl.set(progress: targetIndex, animated: true)
+    }
+    
+    func pagerViewDidEndScrollAnimation(_ pagerView: FSPagerView) {
+        pageControl.set(progress: pagerView.currentIndex, animated: true)
     }
 }
