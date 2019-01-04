@@ -18,7 +18,11 @@ class KeywordSearchInstitutionCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var institutionAddress: UILabel!
 
     @IBOutlet weak var favoriteButton: FaveButton!
-
+    
+    @IBOutlet weak var faveButtonHeight: NSLayoutConstraint!
+    
+    @IBOutlet weak var faveButtonWidth: NSLayoutConstraint!
+    
     @IBOutlet weak var pagerView: FSPagerView! {
         didSet {
             // 再利用する画像PagerViewCell設定
@@ -41,7 +45,10 @@ class KeywordSearchInstitutionCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var pageControl: CHIPageControlAleppo! {
         didSet {
+            // コントローラーUIViewサイズ
             self.pageControl.frame = CGRect(x: 0, y:0, width: 100, height: 20)
+            // コントローラーUIViewの背景色
+            self.pageControl.backgroundColor = .none
             // ドットの大きさ
             self.pageControl.radius = 4
             // ドットの幅

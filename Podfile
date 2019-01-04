@@ -7,6 +7,7 @@ def install_pods
   pod 'FSPagerView'
   pod 'CHIPageControl'
   pod 'FaveButton'
+  pod 'MaterialComponents'
 end
 
 target 'CollectionViewPractice' do

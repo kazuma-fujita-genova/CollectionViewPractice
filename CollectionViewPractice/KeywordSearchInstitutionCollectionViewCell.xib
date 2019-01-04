@@ -75,6 +75,8 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="255" height="212"/>
             <connections>
+                <outlet property="faveButtonHeight" destination="3tj-QZ-R4P" id="5h1-Z7-2eS"/>
+                <outlet property="faveButtonWidth" destination="hXK-Lb-u02" id="x3f-F0-cao"/>
                 <outlet property="favoriteButton" destination="bW8-gQ-33Y" id="haV-Br-1Iv"/>
                 <outlet property="institutionAddress" destination="Vds-EA-hC9" id="Yxv-Lf-JfC"/>
                 <outlet property="institutionName" destination="Woa-aZ-OBG" id="hob-zw-hym"/>

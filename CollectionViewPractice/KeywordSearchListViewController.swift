@@ -9,6 +9,10 @@
 import UIKit
 import FSPagerView
 import FaveButton
+import MaterialComponents.MaterialSnackbar
+import MaterialComponents.MaterialSnackbar_ColorThemer
+import MaterialComponents.MaterialSnackbar_TypographyThemer
+
 
 class KeywordSearchListViewController: UIViewController {
     
@@ -16,6 +20,10 @@ class KeywordSearchListViewController: UIViewController {
     @IBOutlet weak var keywordSearchCollectionView: UICollectionView!
     
     private var searchController: UISearchController!
+    
+    // let colorScheme = MDCSemanticColorScheme()
+    // let typographyScheme = MDCTypographyScheme()
+    let toastMessage = MDCSnackbarMessage()
     
     // サムネイル画像の名前
     let photos = ["1","2","3","4","5","6","7"]
@@ -35,6 +43,11 @@ class KeywordSearchListViewController: UIViewController {
         
         setupSearchController()
         setupCollectionView()
+        
+        // TODO: スナックバーのテーマ変更
+        // MDCSnackbarColorThemer.applySemanticColorScheme(colorScheme)
+        // MDCSnackbarTypographyThemer.applyTypographyScheme(typographyScheme)
+
     }
     
     // TODO: カスタムクラス化すること
@@ -45,11 +58,11 @@ class KeywordSearchListViewController: UIViewController {
         // 検索ボックスのプレースホルダー文言設定
         searchController.searchBar.placeholder = "病院名・地域名・所在地"
         // キャンセルボタン色設定
-        //searchController.searchBar.tintColor = .black
+        searchController.searchBar.tintColor = .black
         // キャンセルボタン文言設定
-        //searchController.searchBar.setValue("キャンセル", forKey: "_cancelButtonText")
+        searchController.searchBar.setValue("キャンセル", forKey: "_cancelButtonText")
         // キャンセルボタンは非表示
-        searchController.searchBar.setValue("", forKey: "_cancelButtonText")
+        // searchController.searchBar.setValue("", forKey: "_cancelButtonText")
         // 検索ボックス内背景色設定 TODO: 何故かきかない
         // searchController.searchBar.backgroundColor = .white
         // キーボード表示時、NavigationBarを非表示
@@ -109,6 +122,7 @@ extension KeywordSearchListViewController: UICollectionViewDataSource, UICollect
         cell.pagerView.dataSource = self
         cell.pagerView.delegate = self
         cell.favoriteButton.delegate = self
+        
         //セルの背景色をランダムに設定する。
         cell.backgroundColor = UIColor(red: CGFloat(drand48()), green: CGFloat(drand48()), blue: CGFloat(drand48()), alpha: 1.0)
         return cell
@@ -125,7 +139,7 @@ extension KeywordSearchListViewController: UICollectionViewDelegateFlowLayout {
         // 画面横幅 - Cell外側左右マージン32ポイント分空ける
         var widthSize:CGFloat = self.view.bounds.width - (32 * 2)
         var heightSize:CGFloat = widthSize
-        if indexPath.row > 0 {
+        if indexPath.row > 1 {
             // 2Column
             // 1Column横幅の半分 - Cell内側マージン8ポイント分空ける
             widthSize = (widthSize / 2) - 8
@@ -189,5 +203,10 @@ extension KeywordSearchListViewController: FSPagerViewDataSource, FSPagerViewDel
 extension KeywordSearchListViewController: FaveButtonDelegate {
     func faveButton(_ faveButton: FaveButton, didSelected selected: Bool) {
         // TODO: お気に入りボタンタップ処理
+        if selected {
+            toastMessage.text = "かかりつけの病院にしました"
+            MDCSnackbarManager.show(toastMessage)
+            self.dismiss(animated: true, completion: nil)
+        }
     }
 }
