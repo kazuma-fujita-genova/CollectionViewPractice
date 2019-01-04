@@ -13,7 +13,11 @@ import FaveButton
 
 class KeywordSearchInstitutionCollectionViewCell: UICollectionViewCell {
     
+    // TODO: デフォルト表示用ダミー画像を設定
     var photos = ["1"]
+    
+    // VC内で呼ばれるCell拡張Delegate
+    weak var delegate: CollectionCellDelegate?
     
     @IBOutlet weak var institutionName: UILabel!
     
@@ -66,23 +70,37 @@ class KeywordSearchInstitutionCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+
         pagerView.dataSource = self
         pagerView.delegate = self
+        favoriteButton.delegate = self
 
         pagerView.addSubview(pageControl)
         pagerView.addSubview(favoriteButton)
     }
 }
 
+// MARK: - CollectionCellDelegate
+protocol CollectionCellDelegate: class {
+    // VC内で呼ばれるFaveButtonDelegate拡張メソッド
+    func faveButton(_ cell: KeywordSearchInstitutionCollectionViewCell, faveButton: FaveButton, didSelected selected: Bool)
+}
 
+// MARK: - FaveButtonDelegate
+extension KeywordSearchInstitutionCollectionViewCell: FaveButtonDelegate {
+    // VC内でCell情報を利用できるようFaveButtonDelegateを拡張
+    func faveButton(_ faveButton: FaveButton, didSelected selected: Bool) {
+        delegate?.faveButton(self, faveButton:faveButton, didSelected: selected)
+    }
+}
+
+// 画像カルーセル処理。UI部分のみなのでCell内で実装
 // MARK: - FSPagerViewDataSource, FSPagerViewDelegate
 extension KeywordSearchInstitutionCollectionViewCell: FSPagerViewDataSource, FSPagerViewDelegate {
-    
-    func numberOfItems(in pagerView: FSPagerView) -> Int {
-        // pageControl設定
-        pageControl.numberOfPages = photos.count
 
+    func numberOfItems(in pagerView: FSPagerView) -> Int {
+        // pageControlドット数
+        pageControl.numberOfPages = photos.count
         return photos.count
     }
     

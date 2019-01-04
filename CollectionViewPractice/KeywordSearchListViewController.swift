@@ -119,7 +119,8 @@ extension KeywordSearchListViewController: UICollectionViewDataSource, UICollect
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionCell", for: indexPath) as! KeywordSearchInstitutionCollectionViewCell
         
         cell.institutionName.text = photos[indexPath.row]
-        cell.favoriteButton.delegate = self
+        // cell.favoriteButton.delegate = self
+        cell.delegate = self
         
         if indexPath.row < 2 {
             // TODO: とりあえず2Cell分複数画像登録
@@ -168,11 +169,13 @@ extension KeywordSearchListViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
-// MARK: - FaveButtonDelegate
-extension KeywordSearchListViewController: FaveButtonDelegate {
-    func faveButton(_ faveButton: FaveButton, didSelected selected: Bool) {
+// MARK: - CollectionCellDelegate
+extension KeywordSearchListViewController: CollectionCellDelegate {
+    
+    func faveButton(_ cell: KeywordSearchInstitutionCollectionViewCell, faveButton: FaveButton, didSelected selected: Bool) {
         // TODO: お気に入りボタンタップ処理
         if selected {
+            // 画面下部トースト表示
             toastMessage.text = "かかりつけの病院にしました"
             MDCSnackbarManager.show(toastMessage)
             self.dismiss(animated: true, completion: nil)
